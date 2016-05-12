@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+		<title>Reformator reformator_control</title>
+		<link href="editor.css" rel="stylesheet" type="text/css" />
+		<link href="sidebar.css" rel="stylesheet" type="text/css" />
+	</head>
+	<body>
+		<div id="layout">
+			<div id="header">
+				<a href="help.html" target="help" id="help" title="Справка по Реформатору">?</a>
+				<ul class="buttons">
+					<li><a href="#clear" class="button with_icon"><ins class="clear_icon icon"><ins></ins></ins>Очистить HTML</a></li>
+					<li><a href="#typograph" class="button with_icon"><ins class="typograph_icon icon"><ins></ins></ins>Типографить</a></li>
+				</ul>
+			</div>
+			<div id="content">
+				<div id="content_reducer">
+					<div class="reducer">
+						<ul class="format_group">
+							<li><a href="#format p"><span class="p">Обычный параграф</span></a></li>
+							<li><a href="#format div"><span class="div">Слой</span></a></li>
+							<li><h1><a href="#format h1">Заголовок</a></h1></li>
+							<li><h2><a href="#format h2">Заголовок</a></h2></li>
+							<li><h3><a href="#format h3">Заголовок</a></h3></li>
+							<li><a href="#format p.before_list"><span class="p">Перед списком:</span></a></li>
+							<li><a href="#format ul" class="with_icon"><ins class="unordered_list_icon icon"><ins></ins></ins>Ненум. список</a></li>
+							<li><a href="#format ol" class="with_icon"><ins class="ordered_list_icon icon"><ins></ins></ins>Нум. список</a></li>
+							<li class="disabled"><a href="#format li li" class="with_icon"><ins class="sublist_icon icon"><ins></ins></ins>Вложенный список</a></li>
+							<li><a href="#format blockquote"><span class="blockquote">Цитата</span></a></li>
+							<li><a href="#format address"><span class="address">Адрес</span></a></li>
+							<li><a href="#format div.comment"><span class="comment">Комментарий</span></a></li>
+							<li><a href="#format div.incut"><span class="incut">Врезка</span></a></li>
+						</ul>
+						<ul class="format_group">
+							<li><a href="#format span" class="span">Спан</a></li>
+							<li><a href="#format a[href]" class="hyperlink" title="Адрес">Ссылка</a></li>
+							<li><a href="#format a[name]" class="anchor" title="ID">Якорь</a></li>
+							<li><a href="#format strong"><strong>Выделенный</strong></a></li>
+							<li><a href="#format em"><em>Выделенный</em></a></li>
+							<li><a href="#format sup">X<sup>x</sup></a> <a href="#format sub">X<sub>x</sub></a></li>
+							<li><a href="#format nobr"><span class="nobr">Неразрывный</span></a></li>
+							<li><a href="#format nobr.phone"><span class="nobr phone">Телефон</span></a></li>
+						</ul>
+						<ul class="format_group">
+							<li><a href="#format table">Таблица</a></li>
+							<li>
+								<table>
+									<tr>
+										<th><a href="#format table tr > th">Заголовочная ячейка</a></th>
+									</tr>
+								</table>
+							</li>
+							<li class="cells">
+								<span>Выровнять:</span>
+								<a href="#format table tr > .a_m" title="По середине"><span class="icon a_m"><i>&darr;</i><i>&uarr;</i></span>
+								<a href="#format table tr > .a_b" title="По нижнему краю"><span class="icon a_b">&darr;</span></a>
+								<a href="#format table tr > .a_c" title="По центру"><span class="icon a_c">&harr;</span>
+								<a href="#format table tr > .a_r" title="По правому краю"><span class="icon a_r">&rarr;</span></a>
+							</li>
+							<li class="cells">
+								<span>Рамки:</span>
+								<a href="#format table tr > .b_b" title="Рамка снизу"><span class="icon b_b"></span></a>
+								<a href="#format table tr > .b_r" title="Рамка справа"><span class="icon b_r"></span></a>
+							</li>
+							<li class="text">Добавить строку<br />
+								&nbsp;<a href="#format table tr > * append_row_after" class="pseudo with_icon"><ins class="append_row_after_icon icon"><ins></ins></ins>снизу</a>
+								или <a href="#format table tr > * append_row_before" class="pseudo with_icon"><ins class="append_row_before_icon icon"><ins></ins></ins>сверху</a>
+							</li>
+							<li class="text">Добавить колонку<br />
+								&nbsp;<a href="#format table tr > * append_column_before" class="pseudo with_icon"><ins class="append_column_before_icon icon"><ins></ins></ins>слева</a>
+								или  <a href="#format table tr > * append_column_after" class="pseudo with_icon"><ins class="append_column_after_icon icon"><ins></ins></ins>справа</a>
+							</li>
+							<li class="text">Объединить с&nbsp;ячейкой<br />
+								&nbsp;<a href="#format table tr > * join_bottom" class="pseudo with_icon"><ins class="join_bottom_icon icon"><ins></ins></ins>снизу</a>
+								или <a href="#format table tr > * join_right" class="pseudo with_icon"><ins class="join_right_icon icon"><ins></ins></ins>справа</a>
+							</li>
+							<li class="text">Разбить на&nbsp;<a href="#format table tr > * split" class="pseudo with_icon"><ins class="split_icon icon"><ins></ins></ins>ячейки</a></li>
+							<li class="text">Удалить<br />
+								&nbsp;<a href="#format table tr > * remove_row" class="pseudo with_icon"><ins class="remove_row_icon icon"><ins></ins></ins>строку</a>
+								или <a href="#format table tr > * remove_column" class="pseudo with_icon"><ins class="remove_column_icon icon"><ins></ins></ins>колонку</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div id="footer">
+				<ul class="buttons">
+					<li><a href="#maximize" class="button" title="Ctrl + Alt + Enter">Полный экран</a></li>
+					<li><a href="#source" class="button" title="Ctrl + Alt + U">Исходный HTML</a></li>
+					<li><a href="#autoformat" class="button">Автоформатирование</a></li>
+				</ul>
+			</div>
+		</div>
+		<a href="#bar" id="switcher"><span class="hide" title="Скрыть Реформатор"></span><span class="show" title="Показать Реформатор"></span></a>
+		<script type="text/javascript">
+			if(parent && parent.reformator){
+				parent.reformator.control.auto({element: document.body});
+			}
+		</script>
+	</body>
+</html>

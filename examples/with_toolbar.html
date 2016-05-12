@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+		<title>Reformator</title>
+		<link rel="stylesheet" type="text/css" href="../reformator.css" />
+		<link rel="stylesheet" type="text/css" href="../toolbar.css" />
+		<style type="text/css">
+			body {margin: 0; padding: 1em;}
+			form {margin: 0; padding: 0;}
+			.HTML {width: 100% ! important; height: 100% ! important;}
+		</style>
+	</head>
+	<body>
+		<form>
+			<table width="100%" height="100%" cellpadding="0" cellspacing="0" border="0">
+				<tr>
+					<td id="reformator_toolbar">
+						<a href="../help.html" target="help" id="reformator_help" title="Справка по Реформатору">?</a>
+						<ins class="toolbar">
+							<ins><a href="#clear" class="button with_icon"><ins class="clear_icon icon"><ins></ins></ins>Очистить HTML</a></ins>
+							<ins><a href="#typograph" class="button with_icon"><ins class="typograph_icon icon"><ins></ins></ins>Типографить</a></ins>
+						</ins>
+						<ins class="toolbar">
+							<ins><a class="button" href="#format p">Обычный параграф</a></ins>
+							<ins><a class="button" href="#format div">Слой</a></ins>
+							<ins><a class="button" href="#format h1">Заголовок 1</a></ins>
+							<ins><a class="button" href="#format h2">Заголовок 2</a></ins>
+							<ins><a class="button" href="#format h3">Заголовок 3</a></ins>
+							<ins><a class="button" href="#format blockquote">Цитата</a></ins>
+							<ins><a class="button" href="#format address">Адрес</a></ins>
+						</ins>
+						<ins class="toolbar">
+							<ins><a class="button" href="#format p.before_list">Перед списком:</a></ins>
+							<ins><a class="button with_icon" href="#format ul"><ins class="unordered_list_icon icon"><ins></ins></ins>Ненум. список</a></ins>
+							<ins><a class="button with_icon" href="#format ol"><ins class="ordered_list_icon icon"><ins></ins></ins>Нум. список</a></ins>
+							<ins><a class="button with_icon" href="#format li li"><ins class="sublist_icon icon"><ins></ins></ins>Вложенный список</a></ins>
+						</ins>
+						<ins class="toolbar">
+							<ins><a class="button" href="#format span">Спан</a></ins>
+							<ins><a class="button" href="#format a[href]" class="hyperlink" title="Адрес">Ссылка</a></ins>
+							<ins><a class="button" href="#format a[name]" class="anchor" title="ID">Якорь</a></ins>
+							<ins><a class="button" href="#format strong"><strong>Полужирный</strong></a></ins>
+							<ins><a class="button" href="#format em"><em>Наклонный</em></a></ins>
+							<ins><a class="button" href="#format sup">X<sup>x</sup></a></ins>
+							<ins><a class="button" href="#format sub">X<sub>x</sub></a></ins>
+							<ins><a class="button" href="#format nobr">Неразрывный</a></ins>
+							<ins><a class="button" href="#format nobr.phone">Телефон</a></ins>
+						</ins>
+						<ins class="toolbar">
+							<ins><a class="button" href="#source" title="Ctrl + Alt + U">Исходный HTML</a></ins>
+							<ins><a class="button" href="#autoformat">Автоформатирование</a></ins>
+						</ins>
+					</td>
+				</tr>
+				<tr>
+					<td height="100%">
+						<textarea name="something" class="HTML"></textarea>
+					</td>
+				</tr>
+			</table>
+		</form>
+		<script type="text/javascript" charset="utf-8" src="../reformator.js"></script>
+		<script type="text/javascript">
+			reformator.auto({focus: true});
+			reformator.control.auto({element: document.getElementById('reformator_toolbar')});
+		</script>
+	</body>
+</html>

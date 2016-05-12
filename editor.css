@@ -1,0 +1,261 @@
+/* Common */
+	body {
+		background: #fff;
+		color: #000;
+		margin: 0;
+		padding: 5px;
+	}
+	h1, h2, h3, h4, h5, h6, p, div, form, table, tr, th, td, address, blockquote, ins {
+		margin: 0;
+		padding: 0;
+		text-decoration: none;
+	}
+	p, ul, ol, dl, table {
+		margin-top: 0.25em;
+		margin-bottom: 1em;
+	}
+
+/* Block elements */
+	div, .div {
+		border: 1px dashed #999;
+		margin: 2px 2px 2px 0;
+		clear: both;
+	}
+	div:before, div:after {
+		content: '';
+		display: block;
+		clear: both;
+		height: 0;
+	}
+
+	h1 {
+		font-size: 180%;
+		font-weight: bold;
+	}
+	h2, h3, h4, h5, h6 {
+		margin: 1em 0 0 0;
+		padding: 0;
+	}
+	h2 {
+		font-size: 180%;
+		font-weight: normal;
+	}
+	h3 {
+		font-size: 140%;
+		font-weight: bold;
+	}
+	h4 {
+		font-size: 140%;
+		font-weight: normal;
+	}
+	h5 {
+		font-size: 120%;
+		font-weight: bold;
+	}
+	h6 {
+		font-size: 120%;
+		font-weight: normal;
+	}
+
+
+	.before_list {
+		margin-bottom: 0em;
+	}
+
+	li {
+		margin-top: 0;
+		margin-bottom: 0.5em;
+	}
+
+	hr {
+		border: 0 hidden;
+		border-top: 1px solid #000;
+		height: 0;
+		clear: both;
+	}
+
+/* Decorative elements */
+	.comment, .picture, .incut, blockquote, address {
+		padding: 1px 0;
+		margin: 1em 0;
+		border: 0 hidden;
+	}
+
+	.incut, blockquote, address {
+		padding: 1px 1em;
+	}
+
+	blockquote, .blockquote {
+		background: #ffc;
+	}
+
+	address, .address {
+		border: 3px dashed #9cf;
+		font-style: normal;
+	}
+
+	.comment {
+		font-size: 85%;
+		color: #666! important;
+	}
+
+	.picture {
+		background: #eec;
+	}
+
+	.incut {
+		border-left: 3px solid #009;
+		font-size: 120%;
+	}
+
+	.footnote {
+		color: #009;
+	}
+	.footnotes {
+		border-top: 1px solid #009;
+		padding: 0.25em 0 0 0;
+	}
+
+/* Inline elements */
+	code {
+		color: green;
+	}
+	pre, .pre, code {
+		font-family: monospace;
+		font-size: 100%;
+		font-size: 95%\9;
+	}
+	pre code, code pre {
+		font-size: 100%;
+	}
+	pre, .pre {
+		border: 1px dashed green;
+	}
+
+	span, .span {
+		background: #dff;
+	}
+
+	a {
+		text-decoration: underline;
+	}
+	a img {
+		outline: 2px solid;
+	}
+	.popup, .external, .phone, a[name], .anchor {
+		padding-left: 18px ! important;
+		background-image: url('icons.gif');
+		background-position: 0 0;
+		background-repeat: no-repeat;
+	}
+	.external {
+		background-position: 0 -200px;
+		color: #090 ! important;
+	}
+	a[name], .anchor {
+		padding-left: 11px ! important;
+		background-position: 0 -600px;
+		text-decoration: underline ! important;
+	}
+
+	sup, sub {
+		position: relative;
+		top: -0.5em;
+		font-size: 75%;
+		font-size: 90%\9;
+		line-height: 0;
+		vertical-align: baseline;
+	}
+	sub {
+		top: 0.1em;
+	}
+
+	nobr, .nobr {
+		white-space: nowrap;
+		background-color: #efefaa;
+	}
+
+	.phone {
+		white-space: nowrap;
+		padding-left: 0 ! important;
+		padding-right: 18px ! important;
+		background-position: 100% -400px ! important;
+	}
+
+	.left {
+		float: left;
+		margin: 0 1em 0 0;
+		padding: 0.5em;
+	}
+	.right {
+		float: right;
+		margin: 0 0 0 1em;
+		padding: 0.5em;
+	}
+
+	.n {
+		white-space: nowrap;
+		word-spacing: -0.13em;
+	}
+
+	.rur {
+		background: none;
+		color: #999;
+		text-decoration: line-through;
+	}
+	.rur:first-letter {
+		text-transform: uppercase;
+		color: #000;
+	}
+
+/* Tables */
+	table, th, td {
+		border-color: #ccc;
+		font-size: 100%;
+	}
+	th, td {
+		padding: 0.5em 0.75em;
+		vertical-align: top;
+		text-align: left;
+	}
+	th {
+		background: #eee;
+	}
+	table caption {
+		display: none;
+	}
+
+	table.columns {
+		width: 100% ! important;
+		//border-collapse: separate ! important;
+		border-spacing: 2px ! important;
+		border: 1px dashed #ccc ! important;
+	}
+	table.columns th, table.columns td {
+		border: 1px dashed #ccc ! important;
+	}
+
+	.b_t {
+		border-top: 1px solid #000! important;
+	}
+	.b_r {
+		border-right: 1px solid #000! important;
+	}
+	.b_b {
+		border-bottom: 1px solid #000! important;
+	}
+	.b_l {
+		border-left: 1px solid #000! important;
+	}
+	.a_m {
+		vertical-align: middle;
+	}
+	.a_b {
+		vertical-align: bottom;
+	}
+	.a_c {
+		text-align: center;
+	}
+	.a_r {
+		text-align: right;
+	}

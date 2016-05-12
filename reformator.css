@@ -1,0 +1,177 @@
+/* Layout */
+	* html.with_reformator_bar {
+		background-image: url('reformator.css') ! important;
+		background-attachment: fixed ! important;
+		background-repeat: no-repeat ! important;
+		background-position: -1000px -1000px ! important;
+	}
+	html.with_reformator_bar,
+	html.with_reformator_bar body {
+		width: auto ! important;
+		height: 100% ! important;
+	}
+	html.with_reformator_bar body {
+		position: static ! important;
+		margin-right: 12px ! important;
+	}
+	html.reformator_bar_visible body {
+		margin-right: 15em ! important;
+	}
+	html body.reformator_maximize {
+		position: relative ! important;
+		overflow: hidden ! important;
+	}
+	.with_reformator .reformator_maximize * {
+		zoom: normal ! important;
+		opacity: 1 ! important;
+		overflow: visible ! important;
+		float: none ! important;
+		position: static ! important;
+		width: auto ! important;
+		min-width: 0 ! important;
+		max-width: auto ! important;
+		height: auto ! important;
+		min-height: 0 ! important;
+		max-height: auto ! important;
+		margin: 0 ! important;
+		padding: 0 ! important;
+		border: 0 hidden ! important;
+	}
+	.with_reformator .reformator_maximize table {
+		width: 100% ! important;
+	}
+
+/* Reformator bar */
+	#reformator_bar {
+		position: fixed ! important;
+		z-index: 1000 ! important;
+		//position: absolute ! important;
+		top: 0;
+		top: expression(document.getElementsByTagName('body')[0].scrollTop + 'px');
+		right: 0 ! important;
+		bottom: 0 ! important;
+		width: 12px ! important;
+		height: 100% ! important;
+		margin: 0 ! important;
+		padding: 0 ! important;
+		overflow: hidden ! important;
+		box-shadow: 0 -5px 10px 1px rgba(0, 0, 0, 0.2);
+	}
+	.reformator_bar_visible #reformator_bar {
+		width: 15em ! important;
+	}
+	#reformator_bar iframe {
+		position: absolute ! important;
+		z-index: 1 ! important;
+		top: 0 ! important;
+		left: 0 ! important;
+		width: 100% ! important;
+		height: 100% ! important;
+		//position: relative ! important;
+	}
+/* Reformator field */
+	.with_reformator .reformator {
+		position: relative;
+		height: 60px;
+	}
+	.with_reformator .reformator .min {
+		height: 60px;
+	}
+	.with_reformator .reformator_wysiwyg,
+	.with_reformator .reformator_source,
+	.with_reformator .reformator .resizer {
+		border: 1px solid #ccc ! important;
+		overflow: auto ! important;
+	}
+	.with_reformator input.reformator_source {
+		overflow: hidden ! important;
+	}
+	.with_reformator .reformator_current .reformator_wysiwyg,
+	.with_reformator .reformator_current .reformator_source {
+		border: 1px solid #f60 ! important;
+		box-shadow: 0 0 5px 1px rgba(250, 30, 0, 0.3);
+	}
+	.with_reformator .reformator_source,
+	.with_reformator .reformator_wysiwyg,
+	.with_reformator .reformator_inactive .reformator_wysiwyg,
+	.with_reformator .reformator .resizer {
+		position: absolute ! important;
+		z-index: 1 ! important;
+		left: -10000px ! important;
+		top: 0 ! important;
+		margin: 0 ! important;
+		width: 100% ! important;
+		resize: none ! important;
+		box-sizing: border-box ! important;
+	}
+	.with_reformator textarea.reformator_source,
+	.with_reformator .reformator_wysiwyg,
+	.with_reformator .reformator .resizer {
+		height: 100%;
+		height: expression(parentNode.offsetHeight + 'px') ! important;
+		bottom: 0 ! important;
+	}
+	.with_reformator .reformator_inactive .reformator_source,
+	.with_reformator .reformator_wysiwyg,
+	.with_reformator .reformator .resizer {
+		left: 0 ! important;
+		z-index: 2 ! important;
+	}
+	.with_reformator .reformator .resizer {
+		background: url('icons.png') -1000px -1000px no-repeat ! important;
+		top: 5px ! important;
+		z-index: 1 ! important;
+		cursor: row-resize ! important;
+		opacity: 0;
+		filter: alpha(opacity=0);
+		border-color: transparent ! important;
+	}
+	.with_reformator .reformator .resizer_active {
+		z-index: 3 ! important;
+	}
+
+/* Maximize reformator field */
+	.with_reformator .reformator_maximize .resizer {
+		display: none ! important;
+	}
+	html.with_reformator .reformator_maximize .reformator_maximized,
+	html.with_reformator .reformator_maximize .reformator_maximized_label {
+		position: absolute ! important;
+		z-index: 9998 ! important;
+		top: 0 ! important;
+		left: 0 ! important;
+		margin: 0 ! important;
+		padding: 0 ! important;
+		font-size: 100% ! important;
+	}
+	html.with_reformator .reformator_maximize .reformator_maximized,
+	html.with_reformator .reformator_maximize .reformator_maximized .reformator_source,
+	html.with_reformator .reformator_maximize .reformator_maximized .reformator_wysiwyg {
+		border: 0 hidden ! important;
+		height: 100% ! important;
+	}
+	html.with_reformator .reformator_maximize .reformator_maximized {
+		right: auto ! important;
+		height: auto ! important;
+		bottom: 0 ! important;
+		width: 100% ! important;
+		//height: 100% ! important;
+		//bottom: auto ! important;
+	}
+	html.with_reformator .reformator_maximize .reformator_maximized_with_label {
+		top: 2.2em ! important;
+		//top: 0 ! important;
+		//border-top: 2.2em solid #fff ! important;
+	}
+	html.with_reformator .reformator_maximize .reformator_maximized_label {
+		z-index: 9999 ! important;
+		right: 0 ! important;
+		padding: 0.4em 1em ! important;
+		color: #000 ! important;
+		background: #ebebcf ! important;
+		border-bottom: 0.2em solid #f60 ! important;
+		line-height: 1.2 ! important;
+		font-weight: normal ! important;
+		height: 1.2em ! important;
+		//width: 100% ! important;
+	}

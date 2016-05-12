@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+		<title>Reformator</title>
+		<link rel="stylesheet" type="text/css" href="../reformator.css" />
+		<style type="text/css">
+			body {margin: 0; padding: 0;}
+			form {margin: 1em; padding: 0;}
+			.field {margin: 0 0 1em;}
+		</style>
+	</head>
+	<body>
+		<form>
+			<div class="field">
+				<label for="header">Header</label>
+				<input name="header" id="header" class="wysiswyg"/>
+			</div>
+			<div class="field">
+				<label for="summary">Summary</label>
+				<textarea name="summary" id="summary" class="wysiswyg inline"></textarea>
+			</div>
+			<div class="field">
+				<label for="content">Content</label>
+				<textarea name="content" id="content" class="wysiswyg"></textarea>
+			</div>
+		</form>
+		<script type="text/javascript" charset="utf-8" src="../reformator.js"></script>
+		<script type="text/javascript">
+			reformator.auto({bar: true, focus: true, class_name: 'wysiswyg'});
+		</script>
+	</body>
+</html>

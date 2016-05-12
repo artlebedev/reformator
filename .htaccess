@@ -1,0 +1,14 @@
+RemoveHandler css js html
+
+DirectoryIndex default.html
+
+AddCharset UTF-8 .html
+AddCharset UTF-8 .js
+AddCharset UTF-8 .css
+
+<IfModule mod_expires.c>
+	ExpiresActive On
+	ExpiresByType image/gif A3600
+	ExpiresByType image/png A3600
+	ExpiresByType image/jpg A3600
+</IfModule>

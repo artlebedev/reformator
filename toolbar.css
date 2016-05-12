@@ -1,0 +1,167 @@
+/*}
+Common
+{*/
+sup, sub
+{
+position: relative;
+top: -0.5em;
+font-size: 75%;
+font-size: 90%\9;
+line-height: 0;
+vertical-align: baseline;
+}
+sub
+{
+top: 0.1em;
+}
+
+
+/*}
+Toolbars
+{*/
+#reformator_toolbar ins
+{
+text-decoration: none;
+}
+#reformator_toolbar .toolbar
+{
+display: inline-block;
+white-space: nowrap;
+margin: 0;
+padding: 4px 8px 0 0;
+}
+
+
+/*}
+Buttons
+{*/
+#reformator_toolbar .button
+{
+display: inline-block;
+white-space: nowrap;
+margin: 0 2px 4px 0;
+padding: 1px 4px;
+text-decoration: none;
+color: #000;
+border: 1px solid #999;
+min-height: 20px;
+border-radius: 4px ! important;
+-moz-border-radius: 4px ! important;
+-webkit-border-radius: 4px ! important;
+-khtml-border-radius: 4px ! important;
+}
+#reformator_toolbar a:hover
+{
+color: #c30;
+}
+#reformator_toolbar .disabled
+{
+position: relative;
+opacity: 0.3;
+zoom: 1;
+//background: #ffffff;
+filter: progid:DXImageTransform.Microsoft.Alpha(opacity=30) progid:DXImageTransform.Microsoft.Chroma(color=#ffffff);
+}
+#reformator_toolbar .disabled a
+{
+cursor: default! important;
+}
+#reformator_toolbar .disabled a:hover
+{
+color: #000;
+}
+#reformator_toolbar .active
+{
+border-color: #c30;
+}
+
+
+/*}
+Icons
+{*/
+#reformator_toolbar .with_icon
+{
+position: relative;
+z-index: 1;
+padding-left: 20px ! important;
+}
+#reformator_toolbar .with_icon .icon
+{
+position: absolute;
+z-index: 1;
+top: 1.2em;
+left: 2px;
+margin: -14px 0 0 0;
+}
+#reformator_toolbar .icon
+{
+display: -moz-inline-box;
+display: inline-block;
+width: 16px;
+height: 16px;
+font-size: 13px;
+line-height: 13px;
+min-height: 0;
+overflow: hidden;
+}
+#reformator_toolbar .icon ins
+{
+position: absolute;
+top: 0;
+width: 300px;
+height: 48px;
+background-image: url('icons.png');
+background-repeat: no-repeat;
+-background-image: none;
+-filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='icons.png',method='crop');
+}
+#reformator_toolbar a:hover .icon ins
+{
+top: -16px;
+}
+#reformator_toolbar .disabled .icon ins
+{
+top: 0! important;
+background-image: url('icons.png');
+-filter: none;
+}
+#reformator_toolbar .options_icon ins {left: 0;}
+#reformator_toolbar .typograph_icon ins {left: -16px;}
+#reformator_toolbar .clear_icon ins {left: -32px;}
+#reformator_toolbar .unordered_list_icon ins {left: -48px;}
+#reformator_toolbar .ordered_list_icon ins {left: -64px;}
+#reformator_toolbar .sublist_icon ins {left: -80px;}
+
+#reformator_toolbar .append_row_after_icon ins {left: -96px;}
+#reformator_toolbar .append_row_before_icon ins {left: -112px;}
+#reformator_toolbar .append_column_after_icon ins {left: -128px;}
+#reformator_toolbar .append_column_before_icon ins {left: -144px;}
+#reformator_toolbar .join_bottom_icon ins {left: -160px;}
+#reformator_toolbar .join_right_icon ins {left: -176px;}
+#reformator_toolbar .split_icon ins {left: -192px;}
+#reformator_toolbar .remove_row_icon ins {left: -208px;}
+#reformator_toolbar .remove_column_icon ins {left: -224px;}
+
+
+/*}
+Help
+{*/
+#reformator_help
+{
+float: right;
+border: 2px solid #36f;
+color: #36f;
+text-decoration: none;
+font-size: 100%;
+font-family: arial, sans-serif;
+font-weight: bold;
+margin: 4px 0 0;
+padding: 0 0.2em;
+line-height: 1;
+text-align: center;
+z-index: 10;
+border-radius: 4px ! important;
+-moz-border-radius: 4px ! important;
+-webkit-border-radius: 4px ! important;
+-khtml-border-radius: 4px ! important;
+}
