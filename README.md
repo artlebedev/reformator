@@ -1,1 +1,1 @@
-# Reformator <img src="logo.png"/>
+# Reformator <img src="reformator.png"/>
