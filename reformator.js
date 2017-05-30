@@ -2,7 +2,7 @@
 // Copyright Art. Lebedev | http://www.artlebedev.ru/
 // License: BSD | http://opensource.org/licenses/BSD-3-Clause
 // Author: Vladimir Tokmakov | vlalek
-// Updated 2016-05-12
+// Updated 2017-05-30
 
 
 var reformator = {
@@ -22,6 +22,7 @@ var reformator = {
 	, elements_by_tag_name: {}
 	, elements_by_class_name: {nbsp: {}}
 	, sidebar_file_name: 'sidebar.html'
+	, editor_file_name: 'editor.css'
 
 	, init_class: function(params){
 		this[params.name] = {};
@@ -63,7 +64,7 @@ var reformator = {
 		if(params.css_path){
 			this.css_path = params.css_path;
 		}else{
-			this.css_path = this.root_path + 'editor.css';
+			this.css_path = this.root_path + this.editor_file_name;
 		}
 		if(params.bar_path){
 			this.bar_path = params.bar_path;
