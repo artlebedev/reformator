@@ -15,7 +15,7 @@
 		margin-right: 12px ! important;
 	}
 	html.reformator_bar_visible body {
-		margin-right: 15em ! important;
+		margin-right: 20em ! important;
 	}
 	html body.reformator_maximize {
 		position: relative ! important;
@@ -58,7 +58,7 @@
 		box-shadow: 0 -5px 10px 1px rgba(0, 0, 0, 0.2);
 	}
 	.reformator_bar_visible #reformator_bar {
-		width: 15em ! important;
+		width: 20em ! important;
 	}
 	#reformator_bar iframe {
 		position: absolute ! important;
