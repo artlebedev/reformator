@@ -2,7 +2,7 @@
 // Copyright Art. Lebedev | http://www.artlebedev.ru/
 // License: BSD | http://opensource.org/licenses/BSD-3-Clause
 // Author: Vladimir Tokmakov | vlalek
-// Updated 2017-05-30
+// Updated 2017-06-01
 
 
 var reformator = {
@@ -764,6 +764,7 @@ reformator.wysiwyg.prototype = {
 			, 'keydown'
 			, function(event){
 				event = reformator.dom_element.normalize_event(event);
+				reformator.key_code = event.keyCode;
 				if(event.ctrlKey || event.metaKey){
 					if(
 						event.key_code == 89
@@ -850,8 +851,13 @@ reformator.wysiwyg.prototype = {
 						//!t.wysiwyg._update_selection();
 						t.check_for_paragraph();
 					}else if(
-						(event.ctrlKey || event.metaKey)
-						&& event.key_code == 86
+						(
+							(event.ctrlKey || event.metaKey)
+							&& event.key_code == 86
+						) || (
+							(event.keyCode == 91 || event.keyCode == 93)
+							&& reformator.key_code == 86
+						)
 					){
 						// ctrl+v
 						if(t.editor.autoclear){
