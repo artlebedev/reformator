@@ -12,3 +12,7 @@ AddCharset UTF-8 .css
 	ExpiresByType image/png A3600
 	ExpiresByType image/jpg A3600
 </IfModule>
+
+<FilesMatch "\.(html|htm|js|css)$">
+  FileETag None
+</FilesMatch>
