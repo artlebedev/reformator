@@ -77,10 +77,10 @@
 	.with_reformator .reformator .min {
 		height: 60px;
 	}
-	.with_reformator .reformator_wysiwyg,
-	.with_reformator .reformator_source,
-	.with_reformator .reformator .resizer {
-		border: 1px solid #ccc ! important;
+	.reformator_wysiwyg,
+	.reformator_source,
+	.reformator .resizer {
+		border: 1px solid #ccc;
 		overflow: auto ! important;
 	}
 	.with_reformator input.reformator_source {
