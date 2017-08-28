@@ -145,6 +145,16 @@ var reformator = {
 };
 
 
+reformator.js = {};
+
+
+reformator.js.is_array = ('isArray' in Array)
+	? Array.isArray 
+	: function (value){
+		return Object.prototype.toString.call(value) === '[object Array]';
+	};
+
+
 reformator.editor = function(element, params){
 	//try{
 		if(element.reformator){
@@ -1549,7 +1559,7 @@ reformator.wysiwyg.prototype = {
 			element.className = '';
 		}
 		if(params.attributes){
-			if(!params.attributes.length || !params.attributes.sort){
+			if(!reformator.js.is_array(params.attributes)){
 				params.attributes = [params.attributes];
 			}
 			for(var i = 0; i < params.attributes.length; i++){
@@ -2908,10 +2918,10 @@ reformator.dom_element = {
 	, listeners: []
 
 	, fire_event: function(elements, events){
-		if(!elements.sort){
+		if(!reformator.js.is_array(elements)){
 			elements = [elements];
 		}
-		if(!events.sort){
+		if(!reformator.js.is_array(events)){
 			events = [events];
 		}
 		for(var i = 0, ii, event; i < elements.length; i++){
@@ -2937,13 +2947,13 @@ reformator.dom_element = {
 	}
 
 	, add_event_listener: function(element, event, listener){
-		if(element.length && element.sort){
+		if(reformator.js.is_array(element)){
 			for(var i = 0; i < element.length; i++){
 				this.add_event_listener(element[i], event, listener);
 			}
 			return;
 		}
-		if(!event.match && event.length){
+		if(!event.match && reformator.js.is_array(event)){
 			for(var i = 0; i < event.length; i++){
 				this.add_event_listener(element, event[i], listener);
 			}
@@ -2961,13 +2971,13 @@ reformator.dom_element = {
 	}
 
 	, remove_event_listener: function(element, event, listener){
-		if(element.length && element.sort){
+		if(reformator.js.is_array(element)){
 			for(var i = 0; i < element.length; i++){
 				this.remove_event_listener(element[i], event, listener);
 			}
 			return;
 		}
-		if(!event.match && event.length){
+		if(!event.match && reformator.js.is_array(event.length)){
 			for(var i = 0; i < event.length; i++){
 				this.remove_event_listener(element, event[i], listener);
 			}
