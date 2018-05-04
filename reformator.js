@@ -1058,6 +1058,14 @@ reformator.wysiwyg.prototype = {
 			attributes: params.attributes
 		};
 		switch(element.tag_name){
+			case 'dl':
+				var count = prompt('Введите количество терминов', '3')
+				var items = []
+				for(var j = 1; j <= count; j++) {
+					items.push('    <dt>Термин' + j + '</dt><dd>Определение</dd>')
+				}
+				this.document.execCommand('insertHTML', null, '<dl>\n' + items.join('\n') + '\n</dl>');
+				break;
 			case 'ul':
 				this.document.execCommand('insertunorderedlist', null, null);
 				break;
