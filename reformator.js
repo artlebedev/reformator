@@ -2,7 +2,7 @@
 // Copyright Art. Lebedev | http://www.artlebedev.ru/
 // License: BSD | http://opensource.org/licenses/BSD-3-Clause
 // Author: Vladimir Tokmakov | vlalek
-// Updated 2018-03-23
+// Updated 2019-01-15
 
 
 var reformator = {
@@ -4613,7 +4613,7 @@ reformator.typograph = {
 
 		// letters
 
-		this.p.letters_lower     = reformator.language.lower_letters + '&%©\\$€£¥¤' + String.fromCharCode(769);
+		this.p.letters_lower     = reformator.language.lower_letters + '&%©\\$€£¥¤₽' + String.fromCharCode(769);
 		this.p.letters_upper     = reformator.language.upper_letters;
 		this.p.not_letters_upper = '[^' + this.p.letters_upper + ']';
 		this.p.letters           = this.p.letters_lower + this.p.letters_upper;
