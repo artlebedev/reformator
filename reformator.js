@@ -4319,7 +4319,7 @@ reformator.typograph = {
 
 		// replace dash
 		if(!this.params.preserve_original_minus){
-			this.replace('([\xC2\x96\xC2\x97–—−]|(^|[^-])--(?!\\s*-))', 'g', '$2—');
+			this.replace('([\xC2\x96\xC2\x97–—]|(^|[^-])--(?!\\s*-))', 'g', '$2—');
 		}
 
 		// replace spaces
