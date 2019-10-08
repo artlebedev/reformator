@@ -2,7 +2,7 @@
 // Copyright Art. Lebedev | http://www.artlebedev.ru/
 // License: BSD | http://opensource.org/licenses/BSD-3-Clause
 // Author: Vladimir Tokmakov | vlalek
-// Updated 2019-10-07
+// Updated 2019-10-08
 
 
 var reformator = {
@@ -56,7 +56,7 @@ var reformator = {
 				, i = 0
 			;
 			while(i < script_elements.length && !matches){
-				matches = script_elements[i].src.match(/^(.*)reformator.*\.js$/);
+				matches = script_elements[i].src.match(/^(.*)reformator.*\.js(\?.*)?$/);
 				i++;
 			};
 			this.root_path = matches ? matches[1]: './';
