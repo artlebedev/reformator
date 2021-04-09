@@ -2,7 +2,7 @@
 // Copyright Art. Lebedev | http://www.artlebedev.ru/
 // License: BSD | http://opensource.org/licenses/BSD-3-Clause
 // Author: Vladimir Tokmakov | vlalek
-// Updated 2019-10-08
+// Updated 2021-04-09
 
 
 var reformator = {
@@ -448,8 +448,11 @@ reformator.editor.prototype = {
 			}
 			reformator.current = this;
 			this.focused = true;
-			if(this.control_class && reformator.control.element){
-				reformator.dom_element.add_class(reformator.control.element, this.control_class);
+			if(reformator.control.element){
+				reformator.dom_element.add_class(reformator.control.element, 'active');
+				if(this.control_class){
+					reformator.dom_element.add_class(reformator.control.element, this.control_class);
+				}
 			}
 			reformator.dom_element.add_class(this.element, 'reformator_current');
 			if(from_reformator.edited){
@@ -470,8 +473,11 @@ reformator.editor.prototype = {
 		if(this.focused){
 			this.focused = false;
 			reformator.dom_element.remove_class(this.element, 'reformator_current');
-			if(this.control_class && reformator.control.element){
-				reformator.dom_element.remove_class(reformator.control.element, this.control_class);
+			if(reformator.control.element){
+				reformator.dom_element.remove_class(reformator.control.element, 'active');
+				if(this.control_class){
+					reformator.dom_element.remove_class(reformator.control.element, this.control_class);
+				}
 			}
 			reformator.control.refresh();
 		}
