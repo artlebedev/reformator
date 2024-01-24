@@ -76,6 +76,7 @@
 	}
 	.with_reformator .reformator .min {
 		height: 60px;
+		display: block;
 	}
 	.reformator_wysiwyg,
 	.reformator_source,

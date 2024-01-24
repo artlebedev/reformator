@@ -2,7 +2,7 @@
 // Copyright Art. Lebedev | http://www.artlebedev.ru/
 // License: BSD | http://opensource.org/licenses/BSD-3-Clause
 // Author: Vladimir Tokmakov | vlalek
-// Updated 2021-04-09
+// Updated 2024-01-24
 
 
 var reformator = {
@@ -209,7 +209,7 @@ reformator.editor.prototype = {
 
 		this.wysiwyg = new reformator.wysiwyg(this, this.element.getElementsByTagName('iframe')[0], text, p);
 
-		this.resizer = {element: this.element.getElementsByTagName('ins')[0]};
+		this.resizer = {element: this.element.getElementsByTagName('ins')[1]};
 
 		var t = this;
 		setTimeout(// For IE 6, FF 2
@@ -263,7 +263,7 @@ reformator.editor.prototype = {
 		layer.className = element.className + ' reformator reformator_inactive';
 		element.className = 'reformator_source';
 
-		layer.innerHTML = '<iframe frameborder="no" class="reformator_wysiwyg" style="display: none;"></iframe><div class="min"></div><ins class="resizer"></ins>';
+		layer.innerHTML = '<iframe frameborder="no" class="reformator_wysiwyg" style="display: none;"></iframe><ins class="min"></ins><ins class="resizer"></ins>';
 		layer.unselectable = 'on';
 		element.parentNode.insertBefore(layer, element);
 		layer.appendChild(element);
@@ -3816,7 +3816,7 @@ reformator.html = {
 			, dl:         {block: true, children: {dt: {}, dd: {}}}
 			, dt:         {block: true, inline_only: true, parents: {dl: {}}}
 			, em:         {inline: true}
-			, embed:      {block: true, inline: true, attributes: {src: {}, type: {}, allowfullscreen: '', width: {}, height: {}}, can_be_empty: true}       
+			, embed:      {block: true, inline: true, attributes: {src: {}, type: {}, allowfullscreen: {}, width: {}, height: {}}, can_be_empty: true}       
 			, fieldset:   {block: true}
 			, font:       {inline: true, deprecated: true, remove: true}
 			, form:       {block: true, attributes: {id: {}, name: {}, action: {}, method: {}}}
@@ -4377,7 +4377,7 @@ reformator.typograph = {
 	open_nobr: function(){
 		var t = this;
 		if(this.params.nobr && !this.params.no_tags){
-			this.tag_counter.inc++;
+			this.tag_counter++;
 			this.tags[this.tag_counter] = '<nobr>';
 		// pochemu-to
 			//this.replace('(\\s|^)(?=' + this.p.word_begin_0 + this.p.letters + '+' + this.p.tag + '[\\-\\—]' + this.p.letters + '{1,' + this.params.symbols_number_for_nobr + '}' + this.p.word_end_0s + ')', 'g', function(str, s1){return s1 + t.p.tag_begin + t.tag_counter + t.p.tag_end;});
