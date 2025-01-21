@@ -2,7 +2,7 @@
 // Copyright Art. Lebedev | http://www.artlebedev.ru/
 // License: BSD | http://opensource.org/licenses/BSD-3-Clause
 // Author: Vladimir Tokmakov | vlalek
-// Updated 2024-01-24
+// Updated 2025-01-21
 
 
 var reformator = {
@@ -4172,6 +4172,7 @@ reformator.typograph = {
 			entity_type_for_shy: 1,
 			entity_type_for_special: 1,
 
+			preserve_hidden_space: false,
 			preserve_original_nbsp: false,
 			symbols_number_for_nbsp: 2,
 
@@ -4318,6 +4319,11 @@ reformator.typograph = {
 		if(this.params.quotation_marks_a && !this.params.preserve_original_quotation){
 			//this.replace('[\xC2\x92‘’′]', 'g', '\'');
 			this.replace('[″«»“”„‹›]', 'g', '"');
+		}
+
+		// replace hidden space
+		if(!this.params.preserve_hidden_space){
+			this.replace('[' + String.fromCharCode(8203) + String.fromCharCode(8204) + String.fromCharCode(8205) + ']', 'g', '');
 		}
 
 		// replace nbsp
