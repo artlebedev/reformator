@@ -938,7 +938,7 @@ reformator.wysiwyg.prototype = {
 	}
 
 	, preprocess: function(text){
-		return text? text.replace(this.nbsp_pattern, '<nobr class="nbsp" unselectable="on">' + reformator.html.entities.common.nbsp[0] + '</nobr>').replace(/(<nobr[^>]*>[^<]*)<nobr[^>]*>([^<]*)<\/nobr>/g, '$1$2').replace(/<\/table>(?=(\s*<\/[a-z\d]+>|<!--.*?-->)*\s*$)/g, '</table>&nbsp;'): '';
+		return text? text.replace(/<script\b[^<]*(?:(?!<\/script>)<[^<]*)*<\/script>/gi, '').replace(/\s+on\w+\s*=\s*(?:"[^"]*"|'[^']*'|[^\s>]*)/gi, '').replace(this.nbsp_pattern, '<nobr class="nbsp" unselectable="on">' + reformator.html.entities.common.nbsp[0] + '</nobr>').replace(/(<nobr[^>]*>[^<]*)<nobr[^>]*>([^<]*)<\/nobr>/g, '$1$2').replace(/<\/table>(?=(\s*<\/[a-z\d]+>|<!--.*?-->)*\s*$)/g, '</table>&nbsp;'): '';
 	}
 
 	, get: function(){
@@ -1090,7 +1090,7 @@ reformator.wysiwyg.prototype = {
 						&& (
 							!element.class_name
 							|| (
-								ancestor.className.match(new RegExp('^\\s*' + element.class_name + '\\s*$'))
+								ancestor.className.match(new RegExp('^\\s*' + element.class_name.replace(/[-[\]{}()*+?.,\\^$|#\s]/g, '\\$&') + '\\s*$'))
 								&& element.tag_name != 'table'
 							)
 						)
